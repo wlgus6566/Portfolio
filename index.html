@@ -13,13 +13,15 @@
     <script src="https://kit.fontawesome.com/86f00f2bf6.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
             <img src="images/jh_logo.png" alt="지현로고">
+            <span>JI HYEON</span>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
+            <li class="active navbar__menu__item">Home</li>
             <li class="navbar__menu__item">About</li>
             <li class="navbar__menu__item">Skills</li>
             <li class="navbar__menu__item">My work</li>
@@ -29,117 +31,221 @@
     </nav>
     <!-- Home -->
     <section id="home">
-        <h1 class="home__title">HELLO!</h1>
-        <h2 class="home__desc">Welcome to my Website</h2>
+        <img src="images/profile.jpg" alt="지현" class="home__avatar">
+        <h1 class="home__title">HELLO!<br/>I'm Ji hyeon</h1>
+        <h2 class="home__desc">I'm World-Wide Web Publisher</h2>
         <button class="home__contact">Contact me</button>
     </section>
     <!-- about -->
-    <section id="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus autem nulla, itaque, tenetur labore, sequi ducimus delectus odio numquam recusandae dolor magnam rerum saepe voluptatum dolores et exercitationem quam accusamus.</p>
         <div class="about_majors">
             <div class="major">
                 <div class="major__icon"><i class="fab fa-html5"></i></div>
-                <div class="major__title">HTML</div>
-                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo illo numquam. Magnam excepturi</div>
+                <h2 class="major__title">HTML</h2>
+                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo il </div>
             </div>
             <div class="major">
                 <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
-                <div class="major__title">CSS</div>
-                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo illo numquam. Magnam excepturi</div>
+                <h2 class="major__title">CSS</h2>
+                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo illo n </div>
             </div>
             <div class="major">
                 <div class="major__icon"><i class="fab fa-js-square"></i></div>
-                <div class="major__title">JavaScript</div>
-                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo illo numquam. Magnam excepturi</div>
+                <h2 class="major__title">JavaScript</h2>
+                <div class="major__desc">Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Ipsum quo illo numquam.</div>
             </div>
-        </div>
-        <div class="about__school">
-            <img src="images/dku.png" alt="단국대로고" class="school__logo"/>
-            <p class="school__desc">2019.02 단국대학교 경영학과 졸업</p>
         </div>
     </section>
     <!-- skills -->
-    <section id="skills">
-        <h1>Skills</h1>
-        <h2>Skills &AMP; Attributes</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel minima et accusantium magni vero repellat natus delectus dicta quidem nemo. Voluptas ipsa necessitatibus deserunt corporis soluta a aperiam, recusandae omnis.</p>
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
-                <div class="skill">
-                    <div class="skill__desc">
-                        <span>HTML</span>
-                        <span>90%</span>
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills &AMP; Attributes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel minima et accusantium magni vero repellat natus delectus dicta quidem nemo. Voluptas ipsa necessitatibus deserunt corporis soluta a aperiam, recusandae omnis.</p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__desc" >
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:90%"></div>
+                        </div>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>CSS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value"  style="width:85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>J-Query</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value"  style="width:80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>Photoshop</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__desc">
+                            <span>Illustration</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width:80%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill">
-                    <div class="skill__desc">
-                        <span>HTML</span>
-                        <span>90%</span>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>IntelliJ</span></li>
+                            <li><span>ATOM</span></li>
+                            <li><span>Bracket</span></li>
+                            <li><span>Sketch app</span></li>
+                        </ul>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="etc">
+                        <h3 class="skillset__t">Etc</h3>
+                        <ul class="ect__list">
+                            <li><span>Git</span></li>
+                            <li><span>Scrum Master</span></li>
+                            <li><span>Math</span></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__desc">
-                        <span>CSS</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__desc">
-                        <span>JavaScript</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__desc">
-                        <span>J-Query</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>IntelliJ</span></li>
-                        <li><span>ATOM</span></li>
-                        <li><span>Bracket</span></li>
-                        <li><span>Sketch app</span></li>
-                    </ul>
-                </div>
-                <div class="etc">
-                    <h3 class="skillset__t">Etc</h3>
-                    <ul class="ect__list">
-                        <li><span>Git</span></li>
-                        <li><span>Scrum Master</span></li>
-                        <li><span>Math</span></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
     <!-- work -->
-    <section id="work"></section>
+    <section id="work" class="section">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work_catagories">
+            <button class="category__btn active">All<span class ="category__count">8</span></button>
+            <button class="category__btn">Web Accessibility<span class ="category__count">2</span></button>
+            <button class="category__btn">Responsive<span class ="category__count">3</span></button>
+            <button class="category__btn">Renewal<span class ="category__count">3</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
+                <img src="images/project1.png" alt="프로젝트1">
+                <div class="project__desc">
+                    <h3>Megabox Site</h3>
+                    <span>Megabox Site - Reponsive Website</span>
+                </div>
+             </a>
+        </div>
+    </section>
     <!-- testimonials -->
-    <section id="testimonials"></section>
+    <section id="testimonials" class="section">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="textimonials">
+            <img src="images/people1.jpg" alt="아바타" class="textimonial__avatar">
+            <div class="textimonial__speech-bubble">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis cupiditate vitae harum?</p>
+                <p class="name"><a href="#">Crush</a> / Samsung</p>
+            </div>
+            <img src="images/people1.jpg" alt="아바타" class="textimonial__avatar">
+            <div class="textimonial__speech-bubble">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis cupiditate vitae harum?</p>
+                <p class="name"><a href="#">Crush</a> / Samsung</p>
+            </div>
+        </div>
+    </section>
     <!-- contact -->
-    <section id="contact"></section>
+    <section id="contact" class="section">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">wlgus6566@naver.com</h2>
+        <div class="contat__link">
+            <a href="wlgus6566.dothome.co.kr" target="_blank">
+                <i class="fab fa-gitjub"></i>
+            </a>
+            <a href="wlgus6566.dothome.co.kr" target="_blank">
+                <i class="fab fa-linkedin-square"></i>
+            </a>
+        </div>
+        <p class="contact__rights">
+            2020 Ji hyeon = All rights reserved
+        </p>
+    </section>
 </body>
 </html>
