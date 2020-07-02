@@ -21,13 +21,16 @@
             <span>JI HYEON</span>
         </div>
         <ul class="navbar__menu">
-            <li class="active navbar__menu__item">Home</li>
+            <li class="navbar__menu__item">Home</li>
             <li class="navbar__menu__item">About</li>
             <li class="navbar__menu__item">Skills</li>
             <li class="navbar__menu__item">My work</li>
             <li class="navbar__menu__item">Testimonials</li>
             <li class="navbar__menu__item">Contact</li>
         </ul>
+        <button class="navbar__toogle_btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
     <!-- Home -->
     <section id="home">
@@ -148,14 +151,14 @@
     <!-- work -->
     <section id="work" class="section">
         <h1>My work</h1>
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <div class="work_catagories">
             <button class="category__btn active">All<span class ="category__count">8</span></button>
             <button class="category__btn">Web Accessibility<span class ="category__count">2</span></button>
             <button class="category__btn">Responsive<span class ="category__count">3</span></button>
             <button class="category__btn">Renewal<span class ="category__count">3</span></button>
         </div>
-        <div class="work__projects">
+        <div class="work__projects section__container">
             <a href="http://wlgus6566.dothome.co.kr/mega/index.html" class="project" target="blank">
                 <img src="images/project1.png" alt="프로젝트1">
                 <div class="project__desc">
@@ -216,31 +219,38 @@
     </section>
     <!-- testimonials -->
     <section id="testimonials" class="section">
-        <h1>Testimonials</h1>
-        <h3>See what they say about me</h3>
-        <div class="textimonials">
-            <img src="images/people1.jpg" alt="아바타" class="textimonial__avatar">
-            <div class="textimonial__speech-bubble">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis cupiditate vitae harum?</p>
-                <p class="name"><a href="#">Crush</a> / Samsung</p>
-            </div>
-            <img src="images/people1.jpg" alt="아바타" class="textimonial__avatar">
-            <div class="textimonial__speech-bubble">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis cupiditate vitae harum?</p>
-                <p class="name"><a href="#">Crush</a> / Samsung</p>
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h2>See what they say about me</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="images/people1.jpg" alt="아바타" class="testimonial__avatar">
+                    <div class="testimonial__speech-bubble">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis voluptatum accusantium mollitia expedita odio est reiciendis cupiditate  cupiditate vitae harum?</p>
+                        <p class="name"><a href="#">Crush</a> / Samsung</p>
+                
+                    </div>
+                </div>    
+                <div class="testimonial">
+                    <div class="testimonial__speech-bubble">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam voluptatum accusantium mollitia expedita odio est reiciendis cupiditate vitae harum? voluptatum accusantium mollitia expedita odio est reiciendis cupiditate </p>
+                        <p class="name"><a href="#">Crush</a> / Samsung</p>
+                    </div>
+                    <img src="images/people1.jpg" alt="아바타" class="testimonial__avatar">
+                </div>   
             </div>
         </div>
     </section>
     <!-- contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
+        <h1 class="contact__title">Contact me</h1>
         <h2 class="contact__email">wlgus6566@naver.com</h2>
         <div class="contat__link">
             <a href="wlgus6566.dothome.co.kr" target="_blank">
-                <i class="fab fa-gitjub"></i>
+                <i class="fab fa-github"></i>
             </a>
             <a href="wlgus6566.dothome.co.kr" target="_blank">
-                <i class="fab fa-linkedin-square"></i>
+                <i class="fa fa-linkedin-square"></i>
             </a>
         </div>
         <p class="contact__rights">

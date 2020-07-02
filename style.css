@@ -165,6 +165,15 @@ button{
     font-size: 25px;
 }
 
+.navbar__toogle_btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size: 24px;
+    color: var(--color-white);
+    display:none;
+}
+
 /* Home */
 #home{
     background: url(images/bgc2.png) no-repeat center/cover;
@@ -206,6 +215,10 @@ button{
 /* About */
 #about{
 }
+#about > p{
+    font-size: 16px;
+    color: var(--color-dark-grey);
+}
 .about_majors{
     display: flex;
     justify-content: space-between;
@@ -240,6 +253,10 @@ button{
 
 #skills{
     background-color: var(--color-yellow);
+}
+.section__container > p{
+    color: var(--color-dark-grey);
+    padding:10px 0;
 }
 .skillset{
     display:flex;
@@ -312,6 +329,7 @@ button{
     border-radius: var(--size-border-radius);
     font-size:var(--font-regular);
     padding: 8px 48px;
+    overflow: hidden;
 }
 .category__btn.active,
 .category__btn:hover{
@@ -393,6 +411,101 @@ button{
     left:50%;
     transform:translate(-50%);
     margin-top:5px;
+}
 
+/* Testimonial */
+#testimonials{
+    background-color: var(--color-light-white);
+}
+.testimonials{
+    margin:40px;
+}
+.testimonial{
+    display:flex;
+    align-items: center;
+    margin:40px;
+}
+.testimonial__avatar{
+    width:150px;
+    height: 150px;
+    margin-right:40px;
+    border-radius: 50%;
+}
+.testimonial__avatar:nth-child(2){
+    margin-right:0;
+    margin-left:40px;
+}
+.testimonial__speech-bubble{
+    background-color:var(--color-white);
+    padding:30px;
+}
 
+.testimonial__speech-bubble p{
+    color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a{
+    color: var(--color-dark-pink);
+}
+
+/* Contact */
+
+#contact{
+    background-color:var(--color-dark-pink);
+}
+.contact__title,
+.contact__email,
+.contat__link i, p{
+    color:var(--color-white);
+}
+.contat__link i{
+    font-size:40px;
+    margin:20px 5px;
+    transition: 0.35s ease-in-out;
+}
+.contat__link i:hover{
+    color: var(--color-yellow);
+    transform:scale(1.2);
+}
+
+@media(max-width:760px){
+    .navbar__toogle_btn{
+     display:block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        width:100%;
+        display:none;
+    }
+    .navbar__menu__item{
+        text-align:center;
+    }
+    .about_majors{
+        flex-direction: column;
+    }
+    .major{
+        margin-bottom:50px;
+    }
+    .major:last-child{
+        margin-bottom:0;
+    }
+
+    .skillset{
+        flex-direction: column;
+    }
+    .skillset__left{
+      
+    }
+    .project{
+        flex-grow:1;
+    }
+   
+    .testimonial__avatar{
+        width: 80px;
+        height: 80px;
+    }
 }
