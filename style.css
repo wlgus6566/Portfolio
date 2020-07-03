@@ -512,7 +512,7 @@ p {
     padding-top: 5px;
   }
   #navbar.navbar--dark {
-    padding: 10px;
+    padding: 8px;
   }
   .navbar__menu {
     flex-direction: column;
