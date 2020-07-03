@@ -43,8 +43,22 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-//
+//스크롤 이동 함수
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
+
+//스크롤 되면 Up버튼 보이고 클릭하면 최상단으로 이동하는 함수
+const UpBtn = document.querySelector('.upBtn');
+
+document.addEventListener('scroll', () => {
+  if (homeHeight / 2 < window.scrollY) {
+    UpBtn.classList.add('visible');
+  } else {
+    UpBtn.classList.remove('visible');
+  }
+});
+UpBtn.addEventListener('click', function () {
+  scrollIntoView('#home');
+});

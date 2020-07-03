@@ -504,3 +504,28 @@ p {
     height: 80px;
   }
 }
+
+/* Arrow up button */
+.upBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-dark-pink);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+}
+.upBtn i {
+  font-size: 50px;
+  color: #fff;
+  line-height: 70px;
+  text-align: center;
+  pointer-events: auto;
+}
+.upBtn.visible {
+  opacity: 1;
+}
