@@ -23,7 +23,14 @@ navbarMenu.addEventListener('click', function (e) {
   }
   //   console.log(e.target.dataset.link); //html에 data-link="#home"으로 지정
   //   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+//내비게이션 토글버튼 클릭 시 메뉴 나오게
+const navbarToogleBtn = document.querySelector('.navbar__toogle_btn');
+navbarToogleBtn.addEventListener('click', function () {
+  navbarMenu.classList.toggle('open');
 });
 
 //contact me 버튼 눌렀을 때 #contact 섹션으로 이동
@@ -43,12 +50,6 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-//스크롤 이동 함수
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
-
 //스크롤 되면 Up버튼 보이고 클릭하면 최상단으로 이동하는 함수
 const UpBtn = document.querySelector('.upBtn');
 
@@ -62,3 +63,40 @@ document.addEventListener('scroll', () => {
 UpBtn.addEventListener('click', function () {
   scrollIntoView('#home');
 });
+
+//Projects
+const workBtnContainer = document.querySelector('.work_catagories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  //버튼 클릭되면 색이 바뀌도록
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300);
+});
+
+//스크롤 이동 함수
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
