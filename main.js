@@ -1,5 +1,5 @@
 'use strict';
-// 네비게이션 바를 스크롤되면 분홍색 배경으로 바꾸기
+// 화면이 스크롤되면 네비게이션 바를 분홍색 배경으로 바꾸기
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
@@ -10,11 +10,11 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// 탭 메뉴를 선택했을 때 해당위치로 특정 태그위치로 스크롤링 되기
+// 탭 메뉴를 선택했을 때 특정 태그위치로 스크롤링 되기 -scrollIntoView 함수
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', function (e) {
   //   console.log(e.target); - 클릭하면 target이 나옴
-  const target = event.target;
+  const target = e.target;
   const link = target.dataset.link;
 
   if (link == null) {
@@ -23,8 +23,14 @@ navbarMenu.addEventListener('click', function (e) {
   }
   //   console.log(e.target.dataset.link); //html에 data-link="#home"으로 지정
   //   scrollTo.scrollIntoView({ behavior: 'smooth' });
-  navbarMenu.classList.remove('open');
+  navbarMenu.classList.remove('open'); //밑에 토글버튼과 연관
+
   scrollIntoView(link);
+
+  //   function scrollIntoView(selector) {
+  //     const scrollTo = document.querySelector(selector);
+  //     scrollTo.scrollIntoView({ behavior: 'smooth' });
+  //   }
 });
 
 //내비게이션 토글버튼 클릭 시 메뉴 나오게
@@ -42,7 +48,7 @@ contactBtn.addEventListener('click', function () {
   // scrollTo.scrollIntoView({ behavior: 'smooth' });
 });
 
-//스크롤이 되면 #header opacity가 연하게
+//스크롤이 되면 #home opacity가 연하게
 const home = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height;
 
