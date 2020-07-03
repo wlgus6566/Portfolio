@@ -21,7 +21,30 @@ navbarMenu.addEventListener('click', function (e) {
     //값이 undefind일 때 - 메뉴 중간 쯤 애매한 위치 클릭하면 나옴
     return; //값을 출력하지 x
   }
-  console.log(e.target.dataset.link); //html에 data-link="#home"으로 지정
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  //   console.log(e.target.dataset.link); //html에 data-link="#home"으로 지정
+  //   scrollTo.scrollIntoView({ behavior: 'smooth' });
+  scrollIntoView(link);
 });
+
+//contact me 버튼 눌렀을 때 #contact 섹션으로 이동
+const contactBtn = document.querySelector('.home__contact');
+
+contactBtn.addEventListener('click', function () {
+  scrollIntoView('#contact');
+  // const scrollTo = document.querySelector('#contact');
+  // scrollTo.scrollIntoView({ behavior: 'smooth' });
+});
+
+//스크롤이 되면 #header opacity가 연하게
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
